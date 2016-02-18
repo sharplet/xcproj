@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A33ADEF1C768EC900AA5AD2 /* Xcproj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A33ADEE1C768EC900AA5AD2 /* Xcproj.m */; };
 		8DD76F9A0486AA7600D96B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		C215308619DBE040002524A7 /* XMLPlistDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C215308519DBE040002524A7 /* XMLPlistDecoder.m */; };
@@ -16,7 +17,7 @@
 		C269E99017B3DCCC0099A0C5 /* DDCliUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C269E98917B3DCCC0099A0C5 /* DDCliUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C269E99117B3DCCC0099A0C5 /* DDGetoptLongParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C269E98C17B3DCCC0099A0C5 /* DDGetoptLongParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C2CDDAD819E1D89E00DD1CBA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2CDDAD719E1D89E00DD1CBA /* AppKit.framework */; };
-		DA1DC01010E59AED005A103B /* Xcproj.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DC00E10E59AED005A103B /* Xcproj.m */; };
+		DA1DC01010E59AED005A103B /* Xcproj+CLI.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DC00E10E59AED005A103B /* Xcproj+CLI.m */; };
 		DAFF25CC1303ECB100584E0E /* XCDUndocumentedChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFF25CB1303ECB100584E0E /* XCDUndocumentedChecker.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,8 @@
 		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Sources/main.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* xcproj_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xcproj_Prefix.pch; path = Sources/xcproj_Prefix.pch; sourceTree = "<group>"; };
+		4A33ADED1C768EC900AA5AD2 /* Xcproj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xcproj.h; path = Sources/Xcproj.h; sourceTree = "<group>"; };
+		4A33ADEE1C768EC900AA5AD2 /* Xcproj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Xcproj.m; path = Sources/Xcproj.m; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* xcproj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcproj; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20F5C151A92A57A004ADE6B /* IDEBuildParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEBuildParameters.h; sourceTree = "<group>"; };
 		C20F5C161A92A5F4004ADE6B /* IDEFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
@@ -41,8 +44,8 @@
 		C269E98B17B3DCCC0099A0C5 /* DDGetoptLongParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGetoptLongParser.h; sourceTree = "<group>"; };
 		C269E98C17B3DCCC0099A0C5 /* DDGetoptLongParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGetoptLongParser.m; sourceTree = "<group>"; };
 		C2CDDAD719E1D89E00DD1CBA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		DA1DC00E10E59AED005A103B /* Xcproj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Xcproj.m; path = Sources/Xcproj.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		DA1DC00F10E59AED005A103B /* Xcproj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xcproj.h; path = Sources/Xcproj.h; sourceTree = "<group>"; };
+		DA1DC00E10E59AED005A103B /* Xcproj+CLI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "Xcproj+CLI.m"; path = "Sources/Xcproj+CLI.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		DA1DC00F10E59AED005A103B /* Xcproj+CLI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Xcproj+CLI.h"; path = "Sources/Xcproj+CLI.h"; sourceTree = "<group>"; };
 		DA7A018E134F015F00F89E9B /* PBXContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXContainer.h; sourceTree = "<group>"; };
 		DA7A018F134F01DE00F89E9B /* PBXGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXGroup.h; sourceTree = "<group>"; };
 		DA7A0218134F06FF00F89E9B /* PBXReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXReference.h; sourceTree = "<group>"; };
@@ -92,8 +95,10 @@
 			children = (
 				32A70AAB03705E1F00C91783 /* xcproj_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* main.m */,
-				DA1DC00F10E59AED005A103B /* Xcproj.h */,
-				DA1DC00E10E59AED005A103B /* Xcproj.m */,
+				4A33ADED1C768EC900AA5AD2 /* Xcproj.h */,
+				4A33ADEE1C768EC900AA5AD2 /* Xcproj.m */,
+				DA1DC00F10E59AED005A103B /* Xcproj+CLI.h */,
+				DA1DC00E10E59AED005A103B /* Xcproj+CLI.m */,
 				DAFF25CA1303ECB100584E0E /* XCDUndocumentedChecker.h */,
 				DAFF25CB1303ECB100584E0E /* XCDUndocumentedChecker.m */,
 				C215308419DBE040002524A7 /* XMLPlistDecoder.h */,
@@ -227,13 +232,14 @@
 			files = (
 				C269E98D17B3DCCC0099A0C5 /* dd_getopt_long-fbsd.m in Sources */,
 				8DD76F9A0486AA7600D96B5E /* main.m in Sources */,
-				DA1DC01010E59AED005A103B /* Xcproj.m in Sources */,
+				DA1DC01010E59AED005A103B /* Xcproj+CLI.m in Sources */,
 				C269E98E17B3DCCC0099A0C5 /* DDCliApplication.m in Sources */,
 				C215308619DBE040002524A7 /* XMLPlistDecoder.m in Sources */,
 				C269E99017B3DCCC0099A0C5 /* DDCliUtil.m in Sources */,
 				C269E99117B3DCCC0099A0C5 /* DDGetoptLongParser.m in Sources */,
 				DAFF25CC1303ECB100584E0E /* XCDUndocumentedChecker.m in Sources */,
 				C269E98F17B3DCCC0099A0C5 /* DDCliParseException.m in Sources */,
+				4A33ADEF1C768EC900AA5AD2 /* Xcproj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

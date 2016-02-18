@@ -1,22 +1,23 @@
 //
-//  Xcproj.h
+//  XcodeFrameworkLoader.h
 //  xcproj
 //
-//  Created by Cédric Luthi on 07.02.11.
-//  Copyright Cédric Luthi 2011. All rights reserved.
+//  Created by Adam Sharp on 19/02/2016.
+//  Copyright © 2016 Cédric Luthi. All rights reserved.
 //
 
-#import "DDCommandLineInterface.h"
-
+#import <Foundation/Foundation.h>
 #import <DevToolsCore/DevToolsCore.h>
 #import <IDEFoundation/IDEFoundation.h>
 
-@interface Xcproj : NSObject <DDCliApplicationDelegate>
+extern Class PBXGroup;
+extern Class PBXProject;
+extern Class PBXReference;
+extern Class XCBuildConfiguration;
+extern Class IDEBuildParameters;
 
-- (void) addGroupNamed:(NSString *)groupName beforeGroupNamed:(NSString *)otherGroupName;
-- (void) addGroupNamed:(NSString *)groupName inGroupNamed:(NSString *)otherGroupName;
-- (id<PBXFileReference>) addFileAtPath:(NSString *)filePath;
-- (BOOL) addFileReference:(id<PBXFileReference>)fileReference inGroupNamed:(NSString *)groupName;
-- (BOOL) addFileReference:(id<PBXFileReference>)fileReference toBuildPhase:(NSString *)buildPhaseName;
+@interface Xcproj : NSObject
+
++ (void) loadFrameworks;
 
 @end
