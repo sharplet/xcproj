@@ -242,8 +242,6 @@ static void WorkaroundRadar18512876(void)
 
 - (void) setProject:(NSString *)projectName
 {
-	[self.class initializeXcproj];
-	
 	if (![PBXProject isProjectWrapperExtension:[projectName pathExtension]])
 		@throw [DDCliParseException parseExceptionWithReason:[NSString stringWithFormat:@"The project name %@ does not have a valid extension.", projectName] exitCode:EX_USAGE];
 	
