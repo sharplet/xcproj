@@ -15,12 +15,14 @@ extern Class XCBuildConfiguration;
 extern Class IDEBuildParameters;
 
 extern NSString *XcprojErrorDomain;
+extern NSString *XcprojClassLoadErrorsKey;
 
 typedef NS_ENUM(NSInteger, XcprojError) {
 	XcprojErrorXcodeBundleNotFound = 1,
 	XcprojErrorFrameworksNotLoaded = 2,
 	XcprojErrorIDEInitializeNotFound = 3,
 	XcprojErrorXCInitializeCoreIfNeededNotFound = 4,
+	XcprojErrorClassLoadingFailed = 5,
 };
 
 @interface Xcproj (LoadFrameworks)

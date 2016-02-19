@@ -93,7 +93,6 @@
 		[self printUsage:EX_USAGE];
 	
 	NSError *error;
-
 	BOOL loaded = [self.class loadFrameworks:&error];
 	if (!loaded)
 	{
@@ -119,6 +118,11 @@
 			case XcprojErrorXCInitializeCoreIfNeededNotFound:
 			{
 				ddfprintf(stderr, @"%@\n", error.localizedDescription);
+				exit(EX_SOFTWARE);
+			}
+			case XcprojErrorClassLoadingFailed:
+			{
+				ddfprintf(stderr, @"%@: errors: %@\n", error.localizedDescription, [error.userInfo objectForKey:XcprojClassLoadErrorsKey]);
 				exit(EX_SOFTWARE);
 			}
 		}
