@@ -15,6 +15,7 @@
 #import "XMLPlistDecoder.h"
 
 NSString *XcprojErrorDomain = @"xcproj";
+NSString *XcprojClassLoadErrorsKey = @"XcprojClassLoadErrors";
 
 static NSString *XcodeBundleIdentifier = @"com.apple.dt.Xcode";
 
@@ -211,7 +212,6 @@ Class IDEBuildParameters = Nil;
 
 	WorkaroundRadar18512876();
 	
-	BOOL isSafe = YES;
 	NSArray *protocols = @[@protocol(PBXBuildFile),
 	                       @protocol(PBXBuildPhase),
 	                       @protocol(PBXContainer),
@@ -224,6 +224,7 @@ Class IDEBuildParameters = Nil;
 	                       @protocol(XCConfigurationList),
 	                       @protocol(IDEBuildParameters)];
 	
+	NSMutableArray *classErrors = [NSMutableArray new];
 	for (Protocol *protocol in protocols)
 	{
 		NSError *classError = nil;
@@ -232,13 +233,18 @@ Class IDEBuildParameters = Nil;
 			[self setValue:class forKey:[NSString stringWithCString:protocol_getName(protocol) encoding:NSUTF8StringEncoding]];
 		else
 		{
-			isSafe = NO;
-			ddfprintf(stderr, @"%@\n%@\n", [classError localizedDescription], [classError userInfo]);
+			[classErrors addObject:classError];
 		}
 	}
 	
+	BOOL isSafe = classErrors.count == 0;
 	if (!isSafe)
-		exit(EX_SOFTWARE);
+	{
+		NSString *errorDescription = @"Failed to load some classes";
+		NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: errorDescription, XcprojClassLoadErrorsKey: classErrors};
+		*error = [NSError errorWithDomain:XcprojErrorDomain code:XcprojErrorClassLoadingFailed userInfo:errorInfo];
+		return NO;
+	}
 	
 	initialized = YES;
 	return YES;
