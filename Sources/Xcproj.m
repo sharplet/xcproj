@@ -115,6 +115,12 @@
 				ddfprintf(stderr, @"%@: %@\n", error.localizedDescription, [error.userInfo objectForKey:NSUnderlyingErrorKey]);
 				exit(EX_SOFTWARE);
 			}
+			case XcprojErrorIDEInitializeNotFound:
+			case XcprojErrorXCInitializeCoreIfNeededNotFound:
+			{
+				ddfprintf(stderr, @"%@\n", error.localizedDescription);
+				exit(EX_SOFTWARE);
+			}
 		}
 	}
 	
