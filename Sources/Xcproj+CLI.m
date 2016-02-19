@@ -115,8 +115,20 @@ static void *kTargetKey = &kTargetKey;
 	BOOL loaded = [self.class loadFrameworks:&error];
 	if (!loaded)
 	{
-		ddfprintf(stderr, @"%@\n", error.localizedDescription);
-		exit(EX_CONFIG);
+		BOOL isXcprojError = [error.domain isEqualToString:XcprojErrorDomain];
+		if (!isXcprojError)
+		{
+			ddfprintf(stderr, @"An unknown error occurred: %@\n", error);
+			exit(EX_SOFTWARE);
+		}
+
+		switch ((XcprojError)error.code) {
+			case XcprojErrorXcodeBundleNotFound:
+			{
+				ddfprintf(stderr, @"%@\n", error.localizedDescription);
+				exit(EX_CONFIG);
+			}
+		}
 	}
 	
 	NSString *currentDirectoryPath = [[NSFileManager defaultManager] currentDirectoryPath];
