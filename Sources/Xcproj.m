@@ -10,7 +10,6 @@
 
 #import <dlfcn.h>
 #import <objc/runtime.h>
-#import "DDCommandLineInterface.h"
 #import "XCDUndocumentedChecker.h"
 #import "XMLPlistDecoder.h"
 
@@ -63,7 +62,8 @@ static NSBundle * LocateXcodeBundle(NSError **error)
 	
 	if (xcodeAppPath && ![[xcodeAppPath stringByResolvingSymlinksInPath] isEqualToString:xcodeBundle.bundlePath])
 	{
-		ddfprintf(stderr, @"WARNING: '%@' does not point to an Xcode app, using '%@'\n", xcodeAppPath, xcodeBundle.bundlePath);
+		NSString *warning = [NSString stringWithFormat:@"WARNING: '%@' does not point to an Xcode app, using '%@'", xcodeAppPath, xcodeBundle.bundlePath];
+		fprintf(stderr, "%s\n", warning.UTF8String);
 	}
 	
 	return xcodeBundle;
