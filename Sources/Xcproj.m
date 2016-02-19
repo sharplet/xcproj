@@ -9,12 +9,6 @@
 #import "Xcproj.h"
 #import "DDCommandLineInterface.h"
 
-extern Class PBXGroup;
-extern Class PBXProject;
-extern Class PBXReference;
-extern Class XCBuildConfiguration;
-extern Class IDEBuildParameters;
-
 @interface Xcproj () <DDCliApplicationDelegate>
 @end
 
@@ -509,6 +503,16 @@ extern Class IDEBuildParameters;
 		return YES;
 	
 	return [buildPhase addReference:fileReference];
+}
+
+- (id<PBXProject>)projectAtPath:(NSString *)path
+{
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![path isAbsolutePath])
+	{
+		path = [[fileManager currentDirectoryPath] stringByAppendingPathComponent:path];
+	}
+	return [PBXProject projectWithFile:path];
 }
 
 @end

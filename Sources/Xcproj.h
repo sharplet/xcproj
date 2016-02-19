@@ -10,8 +10,16 @@
 #import <Xcproj/DevToolsCore.h>
 #import <Xcproj/IDEFoundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 extern NSString *XcprojErrorDomain;
 extern NSString *XcprojClassLoadErrorsKey;
+
+extern Class PBXGroup;
+extern Class PBXProject;
+extern Class PBXReference;
+extern Class XCBuildConfiguration;
+extern Class IDEBuildParameters;
 
 typedef NS_ENUM(NSInteger, XcprojError) {
 	XcprojErrorXcodeBundleNotFound = 1,
@@ -23,9 +31,11 @@ typedef NS_ENUM(NSInteger, XcprojError) {
 
 @interface Xcproj : NSObject
 
+- (nullable id<PBXProject>)projectAtPath:(NSString *)path;
+
 - (void) addGroupNamed:(NSString *)groupName beforeGroupNamed:(NSString *)otherGroupName;
 - (void) addGroupNamed:(NSString *)groupName inGroupNamed:(NSString *)otherGroupName;
-- (id<PBXFileReference>) addFileAtPath:(NSString *)filePath;
+- (nullable id<PBXFileReference>) addFileAtPath:(NSString *)filePath;
 - (BOOL) addFileReference:(id<PBXFileReference>)fileReference inGroupNamed:(NSString *)groupName;
 - (BOOL) addFileReference:(id<PBXFileReference>)fileReference toBuildPhase:(NSString *)buildPhaseName;
 
@@ -33,6 +43,8 @@ typedef NS_ENUM(NSInteger, XcprojError) {
 
 @interface Xcproj (LoadFrameworks)
 
-+ (BOOL) loadFrameworks:(NSError **)error;
++ (nullable instancetype) loadFrameworks:(NSError **)error;
 
 @end
+
+NS_ASSUME_NONNULL_END
