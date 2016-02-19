@@ -116,20 +116,22 @@ static BOOL LoadXcodeFrameworks(NSBundle *xcodeBundle, NSError **error)
 	return YES;
 }
 
-static void InitializeXcodeFrameworks(void)
+static BOOL InitializeXcodeFrameworks(NSError **error)
 {
 	void(*IDEInitialize)(int initializationOptions, NSError **error) = dlsym(RTLD_DEFAULT, "IDEInitialize");
 	if (!IDEInitialize)
 	{
-		ddfprintf(stderr, @"IDEInitialize function not found.\n");
-		exit(EX_SOFTWARE);
+		NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: @"IDEInitialize function not found."};
+		*error = [NSError errorWithDomain:XcprojErrorDomain code:XcprojErrorIDEInitializeNotFound userInfo:errorInfo];
+		return NO;
 	}
 	
 	void(*XCInitializeCoreIfNeeded)(int initializationOptions) = dlsym(RTLD_DEFAULT, "XCInitializeCoreIfNeeded");
 	if (!XCInitializeCoreIfNeeded)
 	{
-		ddfprintf(stderr, @"XCInitializeCoreIfNeeded function not found.\n");
-		exit(EX_SOFTWARE);
+		NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: @"XCInitializeCoreIfNeeded function not found."};
+		*error = [NSError errorWithDomain:XcprojErrorDomain code:XcprojErrorXCInitializeCoreIfNeededNotFound userInfo:errorInfo];
+		return NO;
 	}
 	
 	// Temporary redirect stderr to /dev/null in order not to print plugin loading errors
@@ -146,6 +148,8 @@ static void InitializeXcodeFrameworks(void)
 	fflush(stderr);
 	dup2(saved_stderr, STDERR_FILENO);
 	close(saved_stderr);
+
+	return YES;
 }
 
 static void WorkaroundRadar18512876(void)
@@ -199,7 +203,12 @@ Class IDEBuildParameters = Nil;
 		return NO;
 	}
 
-	InitializeXcodeFrameworks();
+	BOOL xcodeInitialized = InitializeXcodeFrameworks(error);
+	if (!xcodeInitialized)
+	{
+		return NO;
+	}
+
 	WorkaroundRadar18512876();
 	
 	BOOL isSafe = YES;
