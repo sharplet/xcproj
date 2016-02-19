@@ -92,7 +92,14 @@
 	if ([arguments count] < 1)
 		[self printUsage:EX_USAGE];
 	
-	[self.class loadFrameworks];
+	NSError *error;
+
+	BOOL loaded = [self.class loadFrameworks:&error];
+	if (!loaded)
+	{
+		ddfprintf(stderr, @"%@\n", error.localizedDescription);
+		exit(EX_CONFIG);
+	}
 	
 	NSString *currentDirectoryPath = [[NSFileManager defaultManager] currentDirectoryPath];
 	

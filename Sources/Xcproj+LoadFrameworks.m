@@ -14,6 +14,8 @@
 #import "XCDUndocumentedChecker.h"
 #import "XMLPlistDecoder.h"
 
+NSString *XcprojErrorDomain = @"xcproj";
+
 static NSString *XcodeBundleIdentifier = @"com.apple.dt.Xcode";
 
 static NSBundle * XcodeBundleAtPath(NSString *path)
@@ -22,7 +24,7 @@ static NSBundle * XcodeBundleAtPath(NSString *path)
 	return [xcodeBundle.bundleIdentifier isEqualToString:XcodeBundleIdentifier] ? xcodeBundle : nil;
 }
 
-static NSBundle * XcodeBundle(void)
+static NSBundle * LocateXcodeBundle(NSError **error)
 {
 	NSString *xcodeAppPath = NSProcessInfo.processInfo.environment[@"XCPROJ_XCODE_APP_PATH"];
 	NSBundle *xcodeBundle = XcodeBundleAtPath(xcodeAppPath);
@@ -53,8 +55,9 @@ static NSBundle * XcodeBundle(void)
 	
 	if (!xcodeBundle)
 	{
-		ddfprintf(stderr, @"Xcode.app not found.\n");
-		exit(EX_CONFIG);
+		NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: @"Xcode.app not found."};
+		*error = [NSError errorWithDomain:XcprojErrorDomain code:XcprojErrorXcodeBundleNotFound userInfo:errorInfo];
+		return nil;
 	}
 	
 	if (xcodeAppPath && ![[xcodeAppPath stringByResolvingSymlinksInPath] isEqualToString:xcodeBundle.bundlePath])
@@ -174,13 +177,19 @@ Class IDEBuildParameters = Nil;
 + (void) setIDEBuildParameters:(Class)class        { IDEBuildParameters = class; }
 + (void) setValue:(id)value forUndefinedKey:(NSString *)key { /* ignore */ }
 
-+ (void) loadFrameworks
++ (BOOL) loadFrameworks:(NSError **)error
 {
 	static BOOL initialized = NO;
 	if (initialized)
-		return;
+		return YES;
 	
-	LoadXcodeFrameworks(XcodeBundle());
+	NSBundle *xcodeBundle = LocateXcodeBundle(error);
+	if (!xcodeBundle)
+	{
+		return NO;
+	}
+
+	LoadXcodeFrameworks(xcodeBundle);
 	InitializeXcodeFrameworks();
 	WorkaroundRadar18512876();
 	
@@ -214,6 +223,7 @@ Class IDEBuildParameters = Nil;
 		exit(EX_SOFTWARE);
 	
 	initialized = YES;
+	return YES;
 }
 
 @end
