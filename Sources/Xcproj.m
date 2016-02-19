@@ -7,7 +7,16 @@
 //
 
 #import "Xcproj.h"
-#import "Xcproj+LoadFrameworks.h"
+#import "DDCommandLineInterface.h"
+
+extern Class PBXGroup;
+extern Class PBXProject;
+extern Class PBXReference;
+extern Class XCBuildConfiguration;
+extern Class IDEBuildParameters;
+
+@interface Xcproj () <DDCliApplicationDelegate>
+@end
 
 @implementation Xcproj
 {

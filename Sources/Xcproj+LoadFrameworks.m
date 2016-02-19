@@ -6,7 +6,7 @@
 //  Copyright © 2016 Cédric Luthi. All rights reserved.
 //
 
-#import "Xcproj+LoadFrameworks.h"
+#import "Xcproj.h"
 
 #import <dlfcn.h>
 #import <objc/runtime.h>

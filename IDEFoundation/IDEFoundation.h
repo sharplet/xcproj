@@ -1,1 +1,1 @@
-#import <IDEFoundation/IDEBuildParameters.h>
+#import "IDEBuildParameters.h"
