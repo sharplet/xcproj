@@ -18,6 +18,7 @@ extern NSString *XcprojErrorDomain;
 
 typedef NS_ENUM(NSInteger, XcprojError) {
 	XcprojErrorXcodeBundleNotFound = 1,
+	XcprojErrorFrameworksNotLoaded = 2,
 };
 
 @interface Xcproj (LoadFrameworks)

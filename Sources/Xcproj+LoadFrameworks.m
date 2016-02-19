@@ -68,7 +68,7 @@ static NSBundle * LocateXcodeBundle(NSError **error)
 	return xcodeBundle;
 }
 
-static void LoadXcodeFrameworks(NSBundle *xcodeBundle)
+static BOOL LoadXcodeFrameworks(NSBundle *xcodeBundle, NSError **error)
 {
 	NSURL *xcodeContentsURL = [[xcodeBundle privateFrameworksURL] URLByDeletingLastPathComponent];
 	
@@ -101,8 +101,10 @@ static void LoadXcodeFrameworks(NSBundle *xcodeBundle)
 				loaded = [frameworkBundle loadAndReturnError:&loadError];
 				if (!loaded)
 				{
-					ddfprintf(stderr, @"The %@ %@ failed to load: %@\n", [framework stringByDeletingPathExtension], [framework pathExtension], loadError);
-					exit(EX_SOFTWARE);
+					NSString *errorDescription = [NSString stringWithFormat:@"The %@ %@ failed to load", [framework stringByDeletingPathExtension], [framework pathExtension]];
+					NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: errorDescription, NSUnderlyingErrorKey: loadError};
+					*error = [NSError errorWithDomain:XcprojErrorDomain code:XcprojErrorFrameworksNotLoaded userInfo:errorInfo];
+					return NO;
 				}
 			}
 			
@@ -110,6 +112,8 @@ static void LoadXcodeFrameworks(NSBundle *xcodeBundle)
 				break;
 		}
 	}
+
+	return YES;
 }
 
 static void InitializeXcodeFrameworks(void)
@@ -189,7 +193,12 @@ Class IDEBuildParameters = Nil;
 		return NO;
 	}
 
-	LoadXcodeFrameworks(xcodeBundle);
+	BOOL frameworksLoaded = LoadXcodeFrameworks(xcodeBundle, error);
+	if (!frameworksLoaded)
+	{
+		return NO;
+	}
+
 	InitializeXcodeFrameworks();
 	WorkaroundRadar18512876();
 	

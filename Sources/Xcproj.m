@@ -110,6 +110,11 @@
 				ddfprintf(stderr, @"%@\n", error.localizedDescription);
 				exit(EX_CONFIG);
 			}
+			case XcprojErrorFrameworksNotLoaded:
+			{
+				ddfprintf(stderr, @"%@: %@\n", error.localizedDescription, [error.userInfo objectForKey:NSUnderlyingErrorKey]);
+				exit(EX_SOFTWARE);
+			}
 		}
 	}
 	
