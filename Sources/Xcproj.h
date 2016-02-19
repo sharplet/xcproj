@@ -16,8 +16,14 @@ extern Class PBXReference;
 extern Class XCBuildConfiguration;
 extern Class IDEBuildParameters;
 
+extern NSString *XcprojErrorDomain;
+
+typedef NS_ENUM(NSInteger, XcprojError) {
+	XcprojErrorXcodeBundleNotFound = 1,
+};
+
 @interface Xcproj : NSObject
 
-+ (void) loadFrameworks;
++ (BOOL) loadFrameworks:(NSError **)error;
 
 @end
