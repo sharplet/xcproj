@@ -6,7 +6,7 @@
 //  Copyright © 2016 Cédric Luthi. All rights reserved.
 //
 
-#import "Xcproj+LoadFrameworks.h"
+#import "Xcproj.h"
 
 #import <dlfcn.h>
 #import <objc/runtime.h>
@@ -186,28 +186,28 @@ Class IDEBuildParameters = Nil;
 + (void) setIDEBuildParameters:(Class)class        { IDEBuildParameters = class; }
 + (void) setValue:(id)value forUndefinedKey:(NSString *)key { /* ignore */ }
 
-+ (BOOL) loadFrameworks:(NSError **)error
++ (Xcproj *) loadFrameworks:(NSError **)error
 {
 	static BOOL initialized = NO;
 	if (initialized)
-		return YES;
+		return [Xcproj new];
 	
 	NSBundle *xcodeBundle = LocateXcodeBundle(error);
 	if (!xcodeBundle)
 	{
-		return NO;
+		return nil;
 	}
 
 	BOOL frameworksLoaded = LoadXcodeFrameworks(xcodeBundle, error);
 	if (!frameworksLoaded)
 	{
-		return NO;
+		return nil;
 	}
 
 	BOOL xcodeInitialized = InitializeXcodeFrameworks(error);
 	if (!xcodeInitialized)
 	{
-		return NO;
+		return nil;
 	}
 
 	WorkaroundRadar18512876();
@@ -243,11 +243,11 @@ Class IDEBuildParameters = Nil;
 		NSString *errorDescription = @"Failed to load some classes";
 		NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: errorDescription, XcprojClassLoadErrorsKey: classErrors};
 		*error = [NSError errorWithDomain:XcprojErrorDomain code:XcprojErrorClassLoadingFailed userInfo:errorInfo];
-		return NO;
+		return nil;
 	}
 	
 	initialized = YES;
-	return YES;
+	return [Xcproj new];
 }
 
 @end

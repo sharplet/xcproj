@@ -6,17 +6,45 @@
 //  Copyright Cédric Luthi 2011. All rights reserved.
 //
 
-#import "DDCommandLineInterface.h"
+#import <AppKit/AppKit.h>
+#import <Xcproj/DevToolsCore.h>
+#import <Xcproj/IDEFoundation.h>
 
-#import <DevToolsCore/DevToolsCore.h>
-#import <IDEFoundation/IDEFoundation.h>
+NS_ASSUME_NONNULL_BEGIN
 
-@interface Xcproj : NSObject <DDCliApplicationDelegate>
+extern NSString *XcprojErrorDomain;
+extern NSString *XcprojClassLoadErrorsKey;
+
+extern Class PBXGroup;
+extern Class PBXProject;
+extern Class PBXReference;
+extern Class XCBuildConfiguration;
+extern Class IDEBuildParameters;
+
+typedef NS_ENUM(NSInteger, XcprojError) {
+	XcprojErrorXcodeBundleNotFound = 1,
+	XcprojErrorFrameworksNotLoaded = 2,
+	XcprojErrorIDEInitializeNotFound = 3,
+	XcprojErrorXCInitializeCoreIfNeededNotFound = 4,
+	XcprojErrorClassLoadingFailed = 5,
+};
+
+@interface Xcproj : NSObject
+
+- (nullable id<PBXProject>)projectAtPath:(NSString *)path;
 
 - (void) addGroupNamed:(NSString *)groupName beforeGroupNamed:(NSString *)otherGroupName;
 - (void) addGroupNamed:(NSString *)groupName inGroupNamed:(NSString *)otherGroupName;
-- (id<PBXFileReference>) addFileAtPath:(NSString *)filePath;
+- (nullable id<PBXFileReference>) addFileAtPath:(NSString *)filePath;
 - (BOOL) addFileReference:(id<PBXFileReference>)fileReference inGroupNamed:(NSString *)groupName;
 - (BOOL) addFileReference:(id<PBXFileReference>)fileReference toBuildPhase:(NSString *)buildPhaseName;
 
 @end
+
+@interface Xcproj (LoadFrameworks)
+
++ (nullable instancetype) loadFrameworks:(NSError **)error;
+
+@end
+
+NS_ASSUME_NONNULL_END

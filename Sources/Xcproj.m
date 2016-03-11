@@ -7,7 +7,10 @@
 //
 
 #import "Xcproj.h"
-#import "Xcproj+LoadFrameworks.h"
+#import "DDCommandLineInterface.h"
+
+@interface Xcproj () <DDCliApplicationDelegate>
+@end
 
 @implementation Xcproj
 {
@@ -500,6 +503,16 @@
 		return YES;
 	
 	return [buildPhase addReference:fileReference];
+}
+
+- (id<PBXProject>)projectAtPath:(NSString *)path
+{
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![path isAbsolutePath])
+	{
+		path = [[fileManager currentDirectoryPath] stringByAppendingPathComponent:path];
+	}
+	return [PBXProject projectWithFile:path];
 }
 
 @end
