@@ -11,21 +11,36 @@
 		4AC1757A1C9B9E9C00005FE7 /* XCDUndocumentedChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFF25CB1303ECB100584E0E /* XCDUndocumentedChecker.m */; };
 		4AC1757B1C9B9E9F00005FE7 /* XMLPlistDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C215308519DBE040002524A7 /* XMLPlistDecoder.m */; };
 		4AC1757D1C9B9FA000005FE7 /* libxcproj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC175701C9B9D9300005FE7 /* libxcproj.a */; };
-		4AC175821C9BA09800005FE7 /* Xcproj.h in Umbrella Header */ = {isa = PBXBuildFile; fileRef = 4A33ADED1C768EC900AA5AD2 /* Xcproj.h */; };
-		4AC175841C9BA0EA00005FE7 /* DevToolsCore.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8CA0041302B0D9008B3560 /* DevToolsCore.h */; };
-		4AC175851C9BA0EA00005FE7 /* PBXBuildFile.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8CA0301302B27C008B3560 /* PBXBuildFile.h */; };
-		4AC175861C9BA0EA00005FE7 /* PBXBuildPhase.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFC1302AF93008B3560 /* PBXBuildPhase.h */; };
-		4AC175871C9BA0EA00005FE7 /* PBXBuildStyle.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = C20F5C171A93505D004ADE6B /* PBXBuildStyle.h */; };
-		4AC175881C9BA0EA00005FE7 /* PBXContainer.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A018E134F015F00F89E9B /* PBXContainer.h */; };
-		4AC175891C9BA0EA00005FE7 /* PBXFileReference.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A08AD134F4C1600F89E9B /* PBXFileReference.h */; };
-		4AC1758A1C9BA0EA00005FE7 /* PBXGroup.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A018F134F01DE00F89E9B /* PBXGroup.h */; };
-		4AC1758B1C9BA0EA00005FE7 /* PBXProject.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFD1302AF93008B3560 /* PBXProject.h */; };
-		4AC1758C1C9BA0EA00005FE7 /* PBXReference.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A0218134F06FF00F89E9B /* PBXReference.h */; };
-		4AC1758D1C9BA0EA00005FE7 /* PBXTarget.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFE1302AF93008B3560 /* PBXTarget.h */; };
-		4AC1758E1C9BA0EA00005FE7 /* XCBuildConfiguration.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A0D4F135304F000F89E9B /* XCBuildConfiguration.h */; };
-		4AC1758F1C9BA0EA00005FE7 /* XCConfigurationList.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DAF6DA9515076749002AFA90 /* XCConfigurationList.h */; };
-		4AC175911C9BA11200005FE7 /* IDEBuildParameters.h in IDEFoundation Headers */ = {isa = PBXBuildFile; fileRef = C20F5C151A92A57A004ADE6B /* IDEBuildParameters.h */; };
-		4AC175921C9BA11200005FE7 /* IDEFoundation.h in IDEFoundation Headers */ = {isa = PBXBuildFile; fileRef = C20F5C161A92A5F4004ADE6B /* IDEFoundation.h */; };
+		4AC175821C9BA09800005FE7 /* Xcproj.h in Install Umbrella Header */ = {isa = PBXBuildFile; fileRef = 4A33ADED1C768EC900AA5AD2 /* Xcproj.h */; };
+		4AC175841C9BA0EA00005FE7 /* DevToolsCore.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8CA0041302B0D9008B3560 /* DevToolsCore.h */; };
+		4AC175851C9BA0EA00005FE7 /* PBXBuildFile.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8CA0301302B27C008B3560 /* PBXBuildFile.h */; };
+		4AC175861C9BA0EA00005FE7 /* PBXBuildPhase.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFC1302AF93008B3560 /* PBXBuildPhase.h */; };
+		4AC175871C9BA0EA00005FE7 /* PBXBuildStyle.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = C20F5C171A93505D004ADE6B /* PBXBuildStyle.h */; };
+		4AC175881C9BA0EA00005FE7 /* PBXContainer.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A018E134F015F00F89E9B /* PBXContainer.h */; };
+		4AC175891C9BA0EA00005FE7 /* PBXFileReference.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A08AD134F4C1600F89E9B /* PBXFileReference.h */; };
+		4AC1758A1C9BA0EA00005FE7 /* PBXGroup.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A018F134F01DE00F89E9B /* PBXGroup.h */; };
+		4AC1758B1C9BA0EA00005FE7 /* PBXProject.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFD1302AF93008B3560 /* PBXProject.h */; };
+		4AC1758C1C9BA0EA00005FE7 /* PBXReference.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A0218134F06FF00F89E9B /* PBXReference.h */; };
+		4AC1758D1C9BA0EA00005FE7 /* PBXTarget.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFE1302AF93008B3560 /* PBXTarget.h */; };
+		4AC1758E1C9BA0EA00005FE7 /* XCBuildConfiguration.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A0D4F135304F000F89E9B /* XCBuildConfiguration.h */; };
+		4AC1758F1C9BA0EA00005FE7 /* XCConfigurationList.h in Install DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DAF6DA9515076749002AFA90 /* XCConfigurationList.h */; };
+		4AC175911C9BA11200005FE7 /* IDEBuildParameters.h in Install IDEFoundation Headers */ = {isa = PBXBuildFile; fileRef = C20F5C151A92A57A004ADE6B /* IDEBuildParameters.h */; };
+		4AC175921C9BA11200005FE7 /* IDEFoundation.h in Install IDEFoundation Headers */ = {isa = PBXBuildFile; fileRef = C20F5C161A92A5F4004ADE6B /* IDEFoundation.h */; };
+		4AC175941C9BBC2B00005FE7 /* Xcproj.h in Copy Umbrella Header */ = {isa = PBXBuildFile; fileRef = 4A33ADED1C768EC900AA5AD2 /* Xcproj.h */; };
+		4AC175961C9BBC5100005FE7 /* DevToolsCore.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8CA0041302B0D9008B3560 /* DevToolsCore.h */; };
+		4AC175971C9BBC5100005FE7 /* PBXBuildFile.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8CA0301302B27C008B3560 /* PBXBuildFile.h */; };
+		4AC175981C9BBC5100005FE7 /* PBXBuildPhase.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFC1302AF93008B3560 /* PBXBuildPhase.h */; };
+		4AC175991C9BBC5100005FE7 /* PBXBuildStyle.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = C20F5C171A93505D004ADE6B /* PBXBuildStyle.h */; };
+		4AC1759A1C9BBC5100005FE7 /* PBXContainer.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A018E134F015F00F89E9B /* PBXContainer.h */; };
+		4AC1759B1C9BBC5100005FE7 /* PBXFileReference.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A08AD134F4C1600F89E9B /* PBXFileReference.h */; };
+		4AC1759C1C9BBC5100005FE7 /* PBXGroup.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A018F134F01DE00F89E9B /* PBXGroup.h */; };
+		4AC1759D1C9BBC5100005FE7 /* PBXProject.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFD1302AF93008B3560 /* PBXProject.h */; };
+		4AC1759E1C9BBC5100005FE7 /* PBXReference.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A0218134F06FF00F89E9B /* PBXReference.h */; };
+		4AC1759F1C9BBC5100005FE7 /* PBXTarget.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFE1302AF93008B3560 /* PBXTarget.h */; };
+		4AC175A01C9BBC5100005FE7 /* XCBuildConfiguration.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A0D4F135304F000F89E9B /* XCBuildConfiguration.h */; };
+		4AC175A11C9BBC5100005FE7 /* XCConfigurationList.h in Copy DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DAF6DA9515076749002AFA90 /* XCConfigurationList.h */; };
+		4AC175A31C9BBCC400005FE7 /* IDEBuildParameters.h in Copy IDEFoundation Headers */ = {isa = PBXBuildFile; fileRef = C20F5C151A92A57A004ADE6B /* IDEBuildParameters.h */; };
+		4AC175A41C9BBCC400005FE7 /* IDEFoundation.h in Copy IDEFoundation Headers */ = {isa = PBXBuildFile; fileRef = C20F5C161A92A5F4004ADE6B /* IDEFoundation.h */; };
 		8DD76F9A0486AA7600D96B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		C269E98D17B3DCCC0099A0C5 /* dd_getopt_long-fbsd.m in Sources */ = {isa = PBXBuildFile; fileRef = C269E98317B3DCCC0099A0C5 /* dd_getopt_long-fbsd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -48,50 +63,95 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4AC175811C9BA05000005FE7 /* Umbrella Header */ = {
+		4AC175811C9BA05000005FE7 /* Install Umbrella Header */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
-			dstPath = "$(XCPROJ_HEADERS_INSTALL_PATH)";
+			dstPath = "$(XCPROJ_HEADERS_INSTALL_PATH)/xcproj";
 			dstSubfolderSpec = 0;
 			files = (
-				4AC175821C9BA09800005FE7 /* Xcproj.h in Umbrella Header */,
+				4AC175821C9BA09800005FE7 /* Xcproj.h in Install Umbrella Header */,
 			);
-			name = "Umbrella Header";
+			name = "Install Umbrella Header";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		4AC175831C9BA0BC00005FE7 /* DevToolsCore Headers */ = {
+		4AC175831C9BA0BC00005FE7 /* Install DevToolsCore Headers */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
 			dstPath = "$(XCPROJ_HEADERS_INSTALL_PATH)/DevToolsCore";
 			dstSubfolderSpec = 0;
 			files = (
-				4AC175841C9BA0EA00005FE7 /* DevToolsCore.h in DevToolsCore Headers */,
-				4AC175851C9BA0EA00005FE7 /* PBXBuildFile.h in DevToolsCore Headers */,
-				4AC175861C9BA0EA00005FE7 /* PBXBuildPhase.h in DevToolsCore Headers */,
-				4AC175871C9BA0EA00005FE7 /* PBXBuildStyle.h in DevToolsCore Headers */,
-				4AC175881C9BA0EA00005FE7 /* PBXContainer.h in DevToolsCore Headers */,
-				4AC175891C9BA0EA00005FE7 /* PBXFileReference.h in DevToolsCore Headers */,
-				4AC1758A1C9BA0EA00005FE7 /* PBXGroup.h in DevToolsCore Headers */,
-				4AC1758B1C9BA0EA00005FE7 /* PBXProject.h in DevToolsCore Headers */,
-				4AC1758C1C9BA0EA00005FE7 /* PBXReference.h in DevToolsCore Headers */,
-				4AC1758D1C9BA0EA00005FE7 /* PBXTarget.h in DevToolsCore Headers */,
-				4AC1758E1C9BA0EA00005FE7 /* XCBuildConfiguration.h in DevToolsCore Headers */,
-				4AC1758F1C9BA0EA00005FE7 /* XCConfigurationList.h in DevToolsCore Headers */,
+				4AC175841C9BA0EA00005FE7 /* DevToolsCore.h in Install DevToolsCore Headers */,
+				4AC175851C9BA0EA00005FE7 /* PBXBuildFile.h in Install DevToolsCore Headers */,
+				4AC175861C9BA0EA00005FE7 /* PBXBuildPhase.h in Install DevToolsCore Headers */,
+				4AC175871C9BA0EA00005FE7 /* PBXBuildStyle.h in Install DevToolsCore Headers */,
+				4AC175881C9BA0EA00005FE7 /* PBXContainer.h in Install DevToolsCore Headers */,
+				4AC175891C9BA0EA00005FE7 /* PBXFileReference.h in Install DevToolsCore Headers */,
+				4AC1758A1C9BA0EA00005FE7 /* PBXGroup.h in Install DevToolsCore Headers */,
+				4AC1758B1C9BA0EA00005FE7 /* PBXProject.h in Install DevToolsCore Headers */,
+				4AC1758C1C9BA0EA00005FE7 /* PBXReference.h in Install DevToolsCore Headers */,
+				4AC1758D1C9BA0EA00005FE7 /* PBXTarget.h in Install DevToolsCore Headers */,
+				4AC1758E1C9BA0EA00005FE7 /* XCBuildConfiguration.h in Install DevToolsCore Headers */,
+				4AC1758F1C9BA0EA00005FE7 /* XCConfigurationList.h in Install DevToolsCore Headers */,
 			);
-			name = "DevToolsCore Headers";
+			name = "Install DevToolsCore Headers";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		4AC175901C9BA0FB00005FE7 /* IDEFoundation Headers */ = {
+		4AC175901C9BA0FB00005FE7 /* Install IDEFoundation Headers */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
 			dstPath = "$(XCPROJ_HEADERS_INSTALL_PATH)/IDEFoundation";
 			dstSubfolderSpec = 0;
 			files = (
-				4AC175911C9BA11200005FE7 /* IDEBuildParameters.h in IDEFoundation Headers */,
-				4AC175921C9BA11200005FE7 /* IDEFoundation.h in IDEFoundation Headers */,
+				4AC175911C9BA11200005FE7 /* IDEBuildParameters.h in Install IDEFoundation Headers */,
+				4AC175921C9BA11200005FE7 /* IDEFoundation.h in Install IDEFoundation Headers */,
 			);
-			name = "IDEFoundation Headers";
+			name = "Install IDEFoundation Headers";
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4AC175931C9BBBE800005FE7 /* Copy Umbrella Header */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/xcproj;
+			dstSubfolderSpec = 16;
+			files = (
+				4AC175941C9BBC2B00005FE7 /* Xcproj.h in Copy Umbrella Header */,
+			);
+			name = "Copy Umbrella Header";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AC175951C9BBC3700005FE7 /* Copy DevToolsCore Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/DevToolsCore;
+			dstSubfolderSpec = 16;
+			files = (
+				4AC175961C9BBC5100005FE7 /* DevToolsCore.h in Copy DevToolsCore Headers */,
+				4AC175971C9BBC5100005FE7 /* PBXBuildFile.h in Copy DevToolsCore Headers */,
+				4AC175981C9BBC5100005FE7 /* PBXBuildPhase.h in Copy DevToolsCore Headers */,
+				4AC175991C9BBC5100005FE7 /* PBXBuildStyle.h in Copy DevToolsCore Headers */,
+				4AC1759A1C9BBC5100005FE7 /* PBXContainer.h in Copy DevToolsCore Headers */,
+				4AC1759B1C9BBC5100005FE7 /* PBXFileReference.h in Copy DevToolsCore Headers */,
+				4AC1759C1C9BBC5100005FE7 /* PBXGroup.h in Copy DevToolsCore Headers */,
+				4AC1759D1C9BBC5100005FE7 /* PBXProject.h in Copy DevToolsCore Headers */,
+				4AC1759E1C9BBC5100005FE7 /* PBXReference.h in Copy DevToolsCore Headers */,
+				4AC1759F1C9BBC5100005FE7 /* PBXTarget.h in Copy DevToolsCore Headers */,
+				4AC175A01C9BBC5100005FE7 /* XCBuildConfiguration.h in Copy DevToolsCore Headers */,
+				4AC175A11C9BBC5100005FE7 /* XCConfigurationList.h in Copy DevToolsCore Headers */,
+			);
+			name = "Copy DevToolsCore Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AC175A21C9BBCAC00005FE7 /* Copy IDEFoundation Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/IDEFoundation;
+			dstSubfolderSpec = 16;
+			files = (
+				4AC175A31C9BBCC400005FE7 /* IDEBuildParameters.h in Copy IDEFoundation Headers */,
+				4AC175A41C9BBCC400005FE7 /* IDEFoundation.h in Copy IDEFoundation Headers */,
+			);
+			name = "Copy IDEFoundation Headers";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -268,11 +328,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AC175781C9B9D9300005FE7 /* Build configuration list for PBXNativeTarget "libxcproj" */;
 			buildPhases = (
+				4AC175931C9BBBE800005FE7 /* Copy Umbrella Header */,
+				4AC175951C9BBC3700005FE7 /* Copy DevToolsCore Headers */,
+				4AC175A21C9BBCAC00005FE7 /* Copy IDEFoundation Headers */,
 				4AC1756C1C9B9D9300005FE7 /* Sources */,
 				4AC1756D1C9B9D9300005FE7 /* Frameworks */,
-				4AC175811C9BA05000005FE7 /* Umbrella Header */,
-				4AC175831C9BA0BC00005FE7 /* DevToolsCore Headers */,
-				4AC175901C9BA0FB00005FE7 /* IDEFoundation Headers */,
+				4AC175811C9BA05000005FE7 /* Install Umbrella Header */,
+				4AC175831C9BA0BC00005FE7 /* Install DevToolsCore Headers */,
+				4AC175901C9BA0FB00005FE7 /* Install IDEFoundation Headers */,
 			);
 			buildRules = (
 			);
@@ -409,7 +472,6 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -423,7 +485,6 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
@@ -468,7 +529,7 @@
 				INSTALL_PATH = /lib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = xcproj;
-				XCPROJ_HEADERS_INSTALL_PATH = "$(INSTALL_PATH)/../include/xcproj";
+				XCPROJ_HEADERS_INSTALL_PATH = "$(INSTALL_PATH)/../include";
 			};
 			name = Debug;
 		};
@@ -505,7 +566,7 @@
 				INSTALL_PATH = /lib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = xcproj;
-				XCPROJ_HEADERS_INSTALL_PATH = "$(INSTALL_PATH)/../include/xcproj";
+				XCPROJ_HEADERS_INSTALL_PATH = "$(INSTALL_PATH)/../include";
 			};
 			name = Release;
 		};
