@@ -186,6 +186,13 @@ Class IDEBuildParameters = Nil;
 + (void) setIDEBuildParameters:(Class)class        { IDEBuildParameters = class; }
 + (void) setValue:(id)value forUndefinedKey:(NSString *)key { /* ignore */ }
 
++ (void)load {
+	NSError *error;
+	if (![self loadFrameworks:&error]) {
+		@throw [NSException exceptionWithName:@"XcprojLoadFailure" reason:error.description userInfo:nil];
+	}
+}
+
 + (Xcproj *) loadFrameworks:(NSError **)error
 {
 	static BOOL initialized = NO;

@@ -9,6 +9,9 @@
 #import <AppKit/AppKit.h>
 #import <Xcproj/DevToolsCore.h>
 #import <Xcproj/IDEFoundation.h>
+#import <Xcproj/XCPObject.h>
+#import <Xcproj/XCPContainer.h>
+#import <Xcproj/XCPProject.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -38,12 +41,6 @@ typedef NS_ENUM(NSInteger, XcprojError) {
 - (nullable id<PBXFileReference>) addFileAtPath:(NSString *)filePath;
 - (BOOL) addFileReference:(id<PBXFileReference>)fileReference inGroupNamed:(NSString *)groupName;
 - (BOOL) addFileReference:(id<PBXFileReference>)fileReference toBuildPhase:(NSString *)buildPhaseName;
-
-@end
-
-@interface Xcproj (LoadFrameworks)
-
-+ (nullable instancetype) loadFrameworks:(NSError **)error;
 
 @end
 

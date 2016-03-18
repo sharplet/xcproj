@@ -12,6 +12,10 @@
 @interface Xcproj () <DDCliApplicationDelegate>
 @end
 
+@interface Xcproj (LoadFrameworks)
++ (nullable instancetype) loadFrameworks:(NSError **)error;
+@end
+
 @implementation Xcproj
 {
 	// Options

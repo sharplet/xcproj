@@ -29,9 +29,16 @@
 		4A33AE6B1C76C01C00AA5AD2 /* XCBuildConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7A0D4F135304F000F89E9B /* XCBuildConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A33AE6C1C76C01C00AA5AD2 /* XCConfigurationList.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF6DA9515076749002AFA90 /* XCConfigurationList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A33AE6F1C76C44900AA5AD2 /* Xcproj.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1DC00F10E59AED005A103B /* Xcproj.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A33AE741C76C54E00AA5AD2 /* IDEMutableBuildParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = C20F5C151A92A57A004ADE6B /* IDEMutableBuildParameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A33AE741C76C54E00AA5AD2 /* IDEBuildParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = C20F5C151A92A57A004ADE6B /* IDEBuildParameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A33AE751C76C54E00AA5AD2 /* IDEFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C20F5C161A92A5F4004ADE6B /* IDEFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A33AE761C76C8EB00AA5AD2 /* Xcproj+LoadFrameworks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A33ADEE1C768EC900AA5AD2 /* Xcproj+LoadFrameworks.m */; };
+		4A42BBB61C98E11200C0029C /* XCPContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A42BBB41C98E11200C0029C /* XCPContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A42BBB71C98E11200C0029C /* XCPContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A42BBB51C98E11200C0029C /* XCPContainer.m */; };
+		4A42BBBE1C98E18E00C0029C /* XCPProject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A42BBBC1C98E18E00C0029C /* XCPProject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A42BBBF1C98E18E00C0029C /* XCPProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A42BBBD1C98E18E00C0029C /* XCPProject.m */; };
+		4A42BBC21C98E21100C0029C /* XCPObject+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A42BBC01C98E21100C0029C /* XCPObject+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4AD319751C928972008531D1 /* XCPObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD319731C928972008531D1 /* XCPObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AD319761C928972008531D1 /* XCPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD319741C928972008531D1 /* XCPObject.m */; };
 		8DD76F9A0486AA7600D96B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		C215308619DBE040002524A7 /* XMLPlistDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C215308519DBE040002524A7 /* XMLPlistDecoder.m */; };
@@ -52,6 +59,13 @@
 		4A33ADEE1C768EC900AA5AD2 /* Xcproj+LoadFrameworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Xcproj+LoadFrameworks.m"; path = "Sources/Xcproj+LoadFrameworks.m"; sourceTree = "<group>"; };
 		4A33AE4E1C76BF2300AA5AD2 /* Xcproj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Xcproj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33AE771C76C97A00AA5AD2 /* Framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
+		4A42BBB41C98E11200C0029C /* XCPContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCPContainer.h; path = Sources/XCPContainer.h; sourceTree = "<group>"; };
+		4A42BBB51C98E11200C0029C /* XCPContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCPContainer.m; path = Sources/XCPContainer.m; sourceTree = "<group>"; };
+		4A42BBBC1C98E18E00C0029C /* XCPProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCPProject.h; path = Sources/XCPProject.h; sourceTree = "<group>"; };
+		4A42BBBD1C98E18E00C0029C /* XCPProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCPProject.m; path = Sources/XCPProject.m; sourceTree = "<group>"; };
+		4A42BBC01C98E21100C0029C /* XCPObject+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCPObject+Private.h"; sourceTree = "<group>"; };
+		4AD319731C928972008531D1 /* XCPObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCPObject.h; path = Sources/XCPObject.h; sourceTree = "<group>"; };
+		4AD319741C928972008531D1 /* XCPObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCPObject.m; path = Sources/XCPObject.m; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* xcproj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcproj; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20F5C151A92A57A004ADE6B /* IDEBuildParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEBuildParameters.h; sourceTree = "<group>"; };
 		C20F5C161A92A5F4004ADE6B /* IDEFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
@@ -131,6 +145,13 @@
 				DA1DC00F10E59AED005A103B /* Xcproj.h */,
 				DA1DC00E10E59AED005A103B /* Xcproj.m */,
 				4A33ADEE1C768EC900AA5AD2 /* Xcproj+LoadFrameworks.m */,
+				4AD319731C928972008531D1 /* XCPObject.h */,
+				4A42BBC01C98E21100C0029C /* XCPObject+Private.h */,
+				4AD319741C928972008531D1 /* XCPObject.m */,
+				4A42BBB41C98E11200C0029C /* XCPContainer.h */,
+				4A42BBB51C98E11200C0029C /* XCPContainer.m */,
+				4A42BBBC1C98E18E00C0029C /* XCPProject.h */,
+				4A42BBBD1C98E18E00C0029C /* XCPProject.m */,
 				DAFF25CA1303ECB100584E0E /* XCDUndocumentedChecker.h */,
 				DAFF25CB1303ECB100584E0E /* XCDUndocumentedChecker.m */,
 				C215308419DBE040002524A7 /* XMLPlistDecoder.h */,
@@ -221,16 +242,20 @@
 				4A33AE641C76C01C00AA5AD2 /* PBXBuildStyle.h in Headers */,
 				4A33AE621C76C01C00AA5AD2 /* PBXBuildFile.h in Headers */,
 				4A33AE691C76C01C00AA5AD2 /* PBXReference.h in Headers */,
+				4AD319751C928972008531D1 /* XCPObject.h in Headers */,
 				4A33AE631C76C01C00AA5AD2 /* PBXBuildPhase.h in Headers */,
 				4A33AE681C76C01C00AA5AD2 /* PBXProject.h in Headers */,
 				4A33AE651C76C01C00AA5AD2 /* PBXContainer.h in Headers */,
+				4A42BBBE1C98E18E00C0029C /* XCPProject.h in Headers */,
 				4A33AE6B1C76C01C00AA5AD2 /* XCBuildConfiguration.h in Headers */,
 				4A33AE6A1C76C01C00AA5AD2 /* PBXTarget.h in Headers */,
 				4A33AE671C76C01C00AA5AD2 /* PBXGroup.h in Headers */,
+				4A42BBB61C98E11200C0029C /* XCPContainer.h in Headers */,
 				4A33AE611C76C00800AA5AD2 /* DevToolsCore.h in Headers */,
+				4A42BBC21C98E21100C0029C /* XCPObject+Private.h in Headers */,
 				4A33AE6C1C76C01C00AA5AD2 /* XCConfigurationList.h in Headers */,
 				4A33AE661C76C01C00AA5AD2 /* PBXFileReference.h in Headers */,
-				4A33AE741C76C54E00AA5AD2 /* IDEMutableBuildParameters.h in Headers */,
+				4A33AE741C76C54E00AA5AD2 /* IDEBuildParameters.h in Headers */,
 				4A33AE751C76C54E00AA5AD2 /* IDEFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,8 +352,11 @@
 				4A33AE5F1C76BFD600AA5AD2 /* XCDUndocumentedChecker.m in Sources */,
 				4A33AE591C76BFD600AA5AD2 /* DDCliApplication.m in Sources */,
 				4A33AE5D1C76BFD600AA5AD2 /* Xcproj.m in Sources */,
+				4AD319761C928972008531D1 /* XCPObject.m in Sources */,
 				4A33AE5A1C76BFD600AA5AD2 /* DDCliParseException.m in Sources */,
+				4A42BBB71C98E11200C0029C /* XCPContainer.m in Sources */,
 				4A33AE581C76BFD600AA5AD2 /* dd_getopt_long-fbsd.m in Sources */,
+				4A42BBBF1C98E18E00C0029C /* XCPProject.m in Sources */,
 				4A33AE761C76C8EB00AA5AD2 /* Xcproj+LoadFrameworks.m in Sources */,
 				4A33AE5C1C76BFD600AA5AD2 /* DDGetoptLongParser.m in Sources */,
 			);
