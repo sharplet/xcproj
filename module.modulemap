@@ -1,0 +1,6 @@
+module Xcproj [system] {
+  header "/usr/local/include/xcproj/Xcproj.h"
+  link "xcproj"
+  link framework "AppKit"
+  export *
+}
