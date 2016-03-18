@@ -1,5 +1,5 @@
-#import "PBXTarget.h"
-#import "XCConfigurationList.h"
+#import <DevToolsCore/PBXTarget.h>
+#import <DevToolsCore/XCConfigurationList.h>
 
 @protocol PBXProject <PBXContainer, NSObject>
 

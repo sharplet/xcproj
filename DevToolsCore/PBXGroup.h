@@ -1,4 +1,4 @@
-#import "PBXReference.h"
+#import <DevToolsCore/PBXReference.h>
 
 @protocol PBXGroup <PBXReference, NSObject>
 

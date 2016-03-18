@@ -1,6 +1,6 @@
-#import "PBXBuildPhase.h"
-#import "XCConfigurationList.h"
-#import "IDEBuildParameters.h"
+#import <DevToolsCore/PBXBuildPhase.h>
+#import <DevToolsCore/XCConfigurationList.h>
+#import <IDEFoundation/IDEBuildParameters.h>
 
 @protocol PBXTarget <NSObject>
 

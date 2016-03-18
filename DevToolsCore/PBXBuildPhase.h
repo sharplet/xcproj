@@ -1,4 +1,4 @@
-#import "PBXFileReference.h"
+#import <DevToolsCore/PBXFileReference.h>
 
 @protocol PBXBuildPhase <NSObject>
 

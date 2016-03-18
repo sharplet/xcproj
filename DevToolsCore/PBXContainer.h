@@ -1,5 +1,5 @@
-#import "PBXGroup.h"
-#import "PBXFileReference.h"
+#import <DevToolsCore/PBXGroup.h>
+#import <DevToolsCore/PBXFileReference.h>
 
 @protocol PBXContainer <NSObject>
 

@@ -1,5 +1,5 @@
-#import "PBXFileReference.h"
-#import "PBXBuildStyle.h"
+#import <DevToolsCore/PBXFileReference.h>
+#import <DevToolsCore/PBXBuildStyle.h>
 
 @protocol XCBuildConfiguration <PBXBuildStyle, NSObject>
 
