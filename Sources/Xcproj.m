@@ -8,6 +8,7 @@
 
 #import "Xcproj.h"
 
+#import <AppKit/NSWorkspace.h>
 #import <dlfcn.h>
 #import <objc/runtime.h>
 #import "XCDUndocumentedChecker.h"

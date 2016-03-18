@@ -7,10 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A33ADEF1C768EC900AA5AD2 /* Xcproj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A33ADEE1C768EC900AA5AD2 /* Xcproj.m */; };
+		4AC175791C9B9E9800005FE7 /* Xcproj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A33ADEE1C768EC900AA5AD2 /* Xcproj.m */; };
+		4AC1757A1C9B9E9C00005FE7 /* XCDUndocumentedChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFF25CB1303ECB100584E0E /* XCDUndocumentedChecker.m */; };
+		4AC1757B1C9B9E9F00005FE7 /* XMLPlistDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C215308519DBE040002524A7 /* XMLPlistDecoder.m */; };
+		4AC1757D1C9B9FA000005FE7 /* libxcproj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC175701C9B9D9300005FE7 /* libxcproj.a */; };
+		4AC175821C9BA09800005FE7 /* Xcproj.h in Umbrella Header */ = {isa = PBXBuildFile; fileRef = 4A33ADED1C768EC900AA5AD2 /* Xcproj.h */; };
+		4AC175841C9BA0EA00005FE7 /* DevToolsCore.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8CA0041302B0D9008B3560 /* DevToolsCore.h */; };
+		4AC175851C9BA0EA00005FE7 /* PBXBuildFile.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8CA0301302B27C008B3560 /* PBXBuildFile.h */; };
+		4AC175861C9BA0EA00005FE7 /* PBXBuildPhase.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFC1302AF93008B3560 /* PBXBuildPhase.h */; };
+		4AC175871C9BA0EA00005FE7 /* PBXBuildStyle.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = C20F5C171A93505D004ADE6B /* PBXBuildStyle.h */; };
+		4AC175881C9BA0EA00005FE7 /* PBXContainer.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A018E134F015F00F89E9B /* PBXContainer.h */; };
+		4AC175891C9BA0EA00005FE7 /* PBXFileReference.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A08AD134F4C1600F89E9B /* PBXFileReference.h */; };
+		4AC1758A1C9BA0EA00005FE7 /* PBXGroup.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A018F134F01DE00F89E9B /* PBXGroup.h */; };
+		4AC1758B1C9BA0EA00005FE7 /* PBXProject.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFD1302AF93008B3560 /* PBXProject.h */; };
+		4AC1758C1C9BA0EA00005FE7 /* PBXReference.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A0218134F06FF00F89E9B /* PBXReference.h */; };
+		4AC1758D1C9BA0EA00005FE7 /* PBXTarget.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA8C9FFE1302AF93008B3560 /* PBXTarget.h */; };
+		4AC1758E1C9BA0EA00005FE7 /* XCBuildConfiguration.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DA7A0D4F135304F000F89E9B /* XCBuildConfiguration.h */; };
+		4AC1758F1C9BA0EA00005FE7 /* XCConfigurationList.h in DevToolsCore Headers */ = {isa = PBXBuildFile; fileRef = DAF6DA9515076749002AFA90 /* XCConfigurationList.h */; };
+		4AC175911C9BA11200005FE7 /* IDEBuildParameters.h in IDEFoundation Headers */ = {isa = PBXBuildFile; fileRef = C20F5C151A92A57A004ADE6B /* IDEBuildParameters.h */; };
+		4AC175921C9BA11200005FE7 /* IDEFoundation.h in IDEFoundation Headers */ = {isa = PBXBuildFile; fileRef = C20F5C161A92A5F4004ADE6B /* IDEFoundation.h */; };
 		8DD76F9A0486AA7600D96B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
-		C215308619DBE040002524A7 /* XMLPlistDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C215308519DBE040002524A7 /* XMLPlistDecoder.m */; };
 		C269E98D17B3DCCC0099A0C5 /* dd_getopt_long-fbsd.m in Sources */ = {isa = PBXBuildFile; fileRef = C269E98317B3DCCC0099A0C5 /* dd_getopt_long-fbsd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C269E98E17B3DCCC0099A0C5 /* DDCliApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = C269E98517B3DCCC0099A0C5 /* DDCliApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C269E98F17B3DCCC0099A0C5 /* DDCliParseException.m in Sources */ = {isa = PBXBuildFile; fileRef = C269E98717B3DCCC0099A0C5 /* DDCliParseException.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -18,8 +35,65 @@
 		C269E99117B3DCCC0099A0C5 /* DDGetoptLongParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C269E98C17B3DCCC0099A0C5 /* DDGetoptLongParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C2CDDAD819E1D89E00DD1CBA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2CDDAD719E1D89E00DD1CBA /* AppKit.framework */; };
 		DA1DC01010E59AED005A103B /* Xcproj+CLI.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DC00E10E59AED005A103B /* Xcproj+CLI.m */; };
-		DAFF25CC1303ECB100584E0E /* XCDUndocumentedChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFF25CB1303ECB100584E0E /* XCDUndocumentedChecker.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4AC1757E1C9B9FB300005FE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AC1756F1C9B9D9300005FE7;
+			remoteInfo = libxcproj;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4AC175811C9BA05000005FE7 /* Umbrella Header */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "$(XCPROJ_HEADERS_INSTALL_PATH)";
+			dstSubfolderSpec = 0;
+			files = (
+				4AC175821C9BA09800005FE7 /* Xcproj.h in Umbrella Header */,
+			);
+			name = "Umbrella Header";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4AC175831C9BA0BC00005FE7 /* DevToolsCore Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "$(XCPROJ_HEADERS_INSTALL_PATH)/DevToolsCore";
+			dstSubfolderSpec = 0;
+			files = (
+				4AC175841C9BA0EA00005FE7 /* DevToolsCore.h in DevToolsCore Headers */,
+				4AC175851C9BA0EA00005FE7 /* PBXBuildFile.h in DevToolsCore Headers */,
+				4AC175861C9BA0EA00005FE7 /* PBXBuildPhase.h in DevToolsCore Headers */,
+				4AC175871C9BA0EA00005FE7 /* PBXBuildStyle.h in DevToolsCore Headers */,
+				4AC175881C9BA0EA00005FE7 /* PBXContainer.h in DevToolsCore Headers */,
+				4AC175891C9BA0EA00005FE7 /* PBXFileReference.h in DevToolsCore Headers */,
+				4AC1758A1C9BA0EA00005FE7 /* PBXGroup.h in DevToolsCore Headers */,
+				4AC1758B1C9BA0EA00005FE7 /* PBXProject.h in DevToolsCore Headers */,
+				4AC1758C1C9BA0EA00005FE7 /* PBXReference.h in DevToolsCore Headers */,
+				4AC1758D1C9BA0EA00005FE7 /* PBXTarget.h in DevToolsCore Headers */,
+				4AC1758E1C9BA0EA00005FE7 /* XCBuildConfiguration.h in DevToolsCore Headers */,
+				4AC1758F1C9BA0EA00005FE7 /* XCConfigurationList.h in DevToolsCore Headers */,
+			);
+			name = "DevToolsCore Headers";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4AC175901C9BA0FB00005FE7 /* IDEFoundation Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "$(XCPROJ_HEADERS_INSTALL_PATH)/IDEFoundation";
+			dstSubfolderSpec = 0;
+			files = (
+				4AC175911C9BA11200005FE7 /* IDEBuildParameters.h in IDEFoundation Headers */,
+				4AC175921C9BA11200005FE7 /* IDEFoundation.h in IDEFoundation Headers */,
+			);
+			name = "IDEFoundation Headers";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Sources/main.m; sourceTree = "<group>"; };
@@ -27,6 +101,7 @@
 		32A70AAB03705E1F00C91783 /* xcproj_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xcproj_Prefix.pch; path = Sources/xcproj_Prefix.pch; sourceTree = "<group>"; };
 		4A33ADED1C768EC900AA5AD2 /* Xcproj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xcproj.h; path = Sources/Xcproj.h; sourceTree = "<group>"; };
 		4A33ADEE1C768EC900AA5AD2 /* Xcproj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Xcproj.m; path = Sources/Xcproj.m; sourceTree = "<group>"; };
+		4AC175701C9B9D9300005FE7 /* libxcproj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libxcproj.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD76FA10486AA7600D96B5E /* xcproj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcproj; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20F5C151A92A57A004ADE6B /* IDEBuildParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEBuildParameters.h; sourceTree = "<group>"; };
 		C20F5C161A92A5F4004ADE6B /* IDEFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
@@ -63,12 +138,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4AC1756D1C9B9D9300005FE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DD76F9B0486AA7600D96B5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C2CDDAD819E1D89E00DD1CBA /* AppKit.framework in Frameworks */,
 				8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */,
+				4AC1757D1C9B9FA000005FE7 /* libxcproj.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD76FA10486AA7600D96B5E /* xcproj */,
+				4AC175701C9B9D9300005FE7 /* libxcproj.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +264,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4AC1756F1C9B9D9300005FE7 /* libxcproj */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AC175781C9B9D9300005FE7 /* Build configuration list for PBXNativeTarget "libxcproj" */;
+			buildPhases = (
+				4AC1756C1C9B9D9300005FE7 /* Sources */,
+				4AC1756D1C9B9D9300005FE7 /* Frameworks */,
+				4AC175811C9BA05000005FE7 /* Umbrella Header */,
+				4AC175831C9BA0BC00005FE7 /* DevToolsCore Headers */,
+				4AC175901C9BA0FB00005FE7 /* IDEFoundation Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libxcproj;
+			productName = libxcproj;
+			productReference = 4AC175701C9B9D9300005FE7 /* libxcproj.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8DD76F960486AA7600D96B5E /* xcproj */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "xcproj" */;
@@ -190,6 +293,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4AC1757F1C9B9FB300005FE7 /* PBXTargetDependency */,
 			);
 			name = xcproj;
 			productInstallPath = "$(HOME)/bin";
@@ -205,6 +309,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Cédric Luthi";
+				TargetAttributes = {
+					4AC1756F1C9B9D9300005FE7 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "xcproj" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -221,11 +330,22 @@
 			projectRoot = "";
 			targets = (
 				8DD76F960486AA7600D96B5E /* xcproj */,
+				4AC1756F1C9B9D9300005FE7 /* libxcproj */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4AC1756C1C9B9D9300005FE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC1757A1C9B9E9C00005FE7 /* XCDUndocumentedChecker.m in Sources */,
+				4AC1757B1C9B9E9F00005FE7 /* XMLPlistDecoder.m in Sources */,
+				4AC175791C9B9E9800005FE7 /* Xcproj.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DD76F990486AA7600D96B5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,16 +354,21 @@
 				8DD76F9A0486AA7600D96B5E /* main.m in Sources */,
 				DA1DC01010E59AED005A103B /* Xcproj+CLI.m in Sources */,
 				C269E98E17B3DCCC0099A0C5 /* DDCliApplication.m in Sources */,
-				C215308619DBE040002524A7 /* XMLPlistDecoder.m in Sources */,
 				C269E99017B3DCCC0099A0C5 /* DDCliUtil.m in Sources */,
 				C269E99117B3DCCC0099A0C5 /* DDGetoptLongParser.m in Sources */,
-				DAFF25CC1303ECB100584E0E /* XCDUndocumentedChecker.m in Sources */,
 				C269E98F17B3DCCC0099A0C5 /* DDCliParseException.m in Sources */,
-				4A33ADEF1C768EC900AA5AD2 /* Xcproj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4AC1757F1C9B9FB300005FE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AC1756F1C9B9D9300005FE7 /* libxcproj */;
+			targetProxy = 4AC1757E1C9B9FB300005FE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB927508733DD40010E9CD /* Debug */ = {
@@ -305,6 +430,85 @@
 			};
 			name = Release;
 		};
+		4AC175761C9B9D9300005FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst/usr/local";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INSTALL_PATH = /lib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = xcproj;
+				XCPROJ_HEADERS_INSTALL_PATH = "$(INSTALL_PATH)/../include/xcproj";
+			};
+			name = Debug;
+		};
+		4AC175771C9B9D9300005FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst/usr/local";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INSTALL_PATH = /lib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = xcproj;
+				XCPROJ_HEADERS_INSTALL_PATH = "$(INSTALL_PATH)/../include/xcproj";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -322,6 +526,15 @@
 			buildConfigurations = (
 				1DEB927908733DD40010E9CD /* Debug */,
 				1DEB927A08733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AC175781C9B9D9300005FE7 /* Build configuration list for PBXNativeTarget "libxcproj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC175761C9B9D9300005FE7 /* Debug */,
+				4AC175771C9B9D9300005FE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
